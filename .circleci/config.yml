@@ -38,7 +38,8 @@ jobs:
               -scheme CircleCIDemo \
               -sdk iphonesimulator \
               -destination "platform=iOS Simulator,name=iPhone 16" \
-              -only-testing:CircleCIDemoUITests 
+              -only-testing:CircleCIDemoUITests \
+	      -disable-concurrent-testing
 
 workflows:
   version: 2
