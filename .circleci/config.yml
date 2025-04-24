@@ -1,28 +1,48 @@
 version: 2.1
 
 executors:
-  mac-executor:
+  macos-executor:
     macos:
-      xcode: 14.2.0 # adjust based on your local Xcode version
+      xcode: "16.0.0"
     working_directory: ~/project
 
 jobs:
-  build:
-    executor: mac-executor
+  build-and-test:
+    executor: macos-executor
     steps:
       - checkout
+
       - run:
-          name: Build iOS Project
+          name: Build iOS App (iPhone 16)
           command: |
-            ls -al
             xcodebuild clean build \
-              -project CICDDemo.xcodeproj \
-              -scheme CICDDemo \
+              -project CircleCIDemo.xcodeproj \
+              -scheme CircleCIDemo \
               -sdk iphonesimulator \
-              -destination 'platform=iOS Simulator,name=iPhone 14'
+              -destination "platform=iOS Simulator,name=iPhone 16" \
+              CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      - run:
+          name: Run Unit Tests
+          command: |
+            xcodebuild test \
+              -project CircleCIDemo.xcodeproj \
+              -scheme CircleCIDemo \
+              -sdk iphonesimulator \
+              -destination "platform=iOS Simulator,name=iPhone 16" \
+              CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      - run:
+          name: Run UI Tests
+          command: |
+            xcodebuild test \
+              -project CircleCIDemo.xcodeproj \
+              -scheme CircleCIDemo \
+              -sdk iphonesimulator \
+              -destination "platform=iOS Simulator,name=iPhone 16" \
+              -only-testing:CircleCIDemoUITests \
+              -disable-concurrent-testing
 
 workflows:
   version: 2
-  build-and-test:
+  build:
     jobs:
-      - build
+      - build-and-test
