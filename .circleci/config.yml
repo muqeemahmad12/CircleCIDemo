@@ -3,7 +3,7 @@ version: 2.1
 executors:
   mac-executor:
     macos:
-      xcode: 14.2.0 # Update this to match your Xcode version
+      xcode: 14.2.0
     working_directory: ~/project
 
 jobs:
@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install CocoaPods
+          name: Install CocoaPods (via Homebrew)
           command: |
-            sudo gem install cocoapods || true
+            brew install cocoapods
             pod install
       - run:
           name: Build the App
