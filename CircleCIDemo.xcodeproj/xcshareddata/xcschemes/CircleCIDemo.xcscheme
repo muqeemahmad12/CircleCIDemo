@@ -41,6 +41,17 @@
                ReferencedContainer = "container:CircleCIDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "54BAFE042DBA48A200C5704A"
+               BuildableName = "CircleCIDemoUITests.xctest"
+               BlueprintName = "CircleCIDemoUITests"
+               ReferencedContainer = "container:CircleCIDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

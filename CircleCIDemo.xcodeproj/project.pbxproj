@@ -14,11 +14,19 @@
 			remoteGlobalIDString = 549ECFEA2DBA1CFE007A7671;
 			remoteInfo = CircleCIDemo;
 		};
+		54BAFE0B2DBA48A200C5704A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 549ECFE32DBA1CFE007A7671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 549ECFEA2DBA1CFE007A7671;
+			remoteInfo = CircleCIDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		549ECFEB2DBA1CFE007A7671 /* CircleCIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleCIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54BAFDF82DBA45AA00C5704A /* CircleCIDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleCIDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54BAFE052DBA48A200C5704A /* CircleCIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleCIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +53,11 @@
 			path = CircleCIDemoTests;
 			sourceTree = "<group>";
 		};
+		54BAFE062DBA48A200C5704A /* CircleCIDemoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CircleCIDemoUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54BAFE022DBA48A200C5704A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +90,7 @@
 			children = (
 				549ECFED2DBA1CFE007A7671 /* CircleCIDemo */,
 				54BAFDF92DBA45AA00C5704A /* CircleCIDemoTests */,
+				54BAFE062DBA48A200C5704A /* CircleCIDemoUITests */,
 				549ECFEC2DBA1CFE007A7671 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +100,7 @@
 			children = (
 				549ECFEB2DBA1CFE007A7671 /* CircleCIDemo.app */,
 				54BAFDF82DBA45AA00C5704A /* CircleCIDemoTests.xctest */,
+				54BAFE052DBA48A200C5704A /* CircleCIDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +153,29 @@
 			productReference = 54BAFDF82DBA45AA00C5704A /* CircleCIDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		54BAFE042DBA48A200C5704A /* CircleCIDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54BAFE0D2DBA48A200C5704A /* Build configuration list for PBXNativeTarget "CircleCIDemoUITests" */;
+			buildPhases = (
+				54BAFE012DBA48A200C5704A /* Sources */,
+				54BAFE022DBA48A200C5704A /* Frameworks */,
+				54BAFE032DBA48A200C5704A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54BAFE0C2DBA48A200C5704A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				54BAFE062DBA48A200C5704A /* CircleCIDemoUITests */,
+			);
+			name = CircleCIDemoUITests;
+			packageProductDependencies = (
+			);
+			productName = CircleCIDemoUITests;
+			productReference = 54BAFE052DBA48A200C5704A /* CircleCIDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -145,6 +190,10 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					54BAFDF72DBA45AA00C5704A = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 549ECFEA2DBA1CFE007A7671;
+					};
+					54BAFE042DBA48A200C5704A = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 549ECFEA2DBA1CFE007A7671;
 					};
@@ -166,6 +215,7 @@
 			targets = (
 				549ECFEA2DBA1CFE007A7671 /* CircleCIDemo */,
 				54BAFDF72DBA45AA00C5704A /* CircleCIDemoTests */,
+				54BAFE042DBA48A200C5704A /* CircleCIDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +229,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		54BAFDF62DBA45AA00C5704A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54BAFE032DBA48A200C5704A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,6 +259,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54BAFE012DBA48A200C5704A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -209,6 +273,11 @@
 			isa = PBXTargetDependency;
 			target = 549ECFEA2DBA1CFE007A7671 /* CircleCIDemo */;
 			targetProxy = 54BAFDFC2DBA45AA00C5704A /* PBXContainerItemProxy */;
+		};
+		54BAFE0C2DBA48A200C5704A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 549ECFEA2DBA1CFE007A7671 /* CircleCIDemo */;
+			targetProxy = 54BAFE0B2DBA48A200C5704A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,6 +489,38 @@
 			};
 			name = Release;
 		};
+		54BAFE0E2DBA48A200C5704A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doceree.socialshare.CircleCIDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CircleCIDemo;
+			};
+			name = Debug;
+		};
+		54BAFE0F2DBA48A200C5704A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.doceree.socialshare.CircleCIDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CircleCIDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,6 +547,15 @@
 			buildConfigurations = (
 				54BAFDFE2DBA45AA00C5704A /* Debug */,
 				54BAFDFF2DBA45AA00C5704A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54BAFE0D2DBA48A200C5704A /* Build configuration list for PBXNativeTarget "CircleCIDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54BAFE0E2DBA48A200C5704A /* Debug */,
+				54BAFE0F2DBA48A200C5704A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

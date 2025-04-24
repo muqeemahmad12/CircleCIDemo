@@ -30,6 +30,16 @@ jobs:
               -sdk iphonesimulator \
               -destination "platform=iOS Simulator,name=iPhone 16" \
               CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+      - run:
+          name: Run UI Tests
+          command: |
+            xcodebuild test \
+              -project CircleCIDemo.xcodeproj \
+              -scheme CircleCIDemo \
+              -sdk iphonesimulator \
+              -destination "platform=iOS Simulator,name=iPhone 16"
+              -only-testing:CircleCIDemoUITests \
+	      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
 workflows:
   version: 2
