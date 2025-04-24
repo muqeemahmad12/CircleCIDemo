@@ -3,7 +3,7 @@ version: 2.1
 executors:
   mac-executor:
     macos:
-      xcode: 14.2.0
+      xcode: 14.2.0 # adjust based on your local Xcode version
     working_directory: ~/project
 
 jobs:
@@ -12,15 +12,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install CocoaPods (via Homebrew)
-          command: |
-            brew install cocoapods
-            pod install
-      - run:
-          name: Build the App
+          name: Build iOS Project
           command: |
             xcodebuild clean build \
-              -workspace CICDDemo.xcworkspace \
+              -project CICDDemo.xcodeproj \
               -scheme CICDDemo \
               -sdk iphonesimulator \
               -destination 'platform=iOS Simulator,name=iPhone 14'
